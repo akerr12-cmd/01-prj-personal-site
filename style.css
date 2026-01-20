@@ -5,6 +5,40 @@
 .Cheshire-Cat-1-4-hex { color: #8D3A6C; }
 .Cheshire-Cat-1-5-hex { color: #C2388C; }
 
+/* Navigation bar styles */
+nav {
+  background-color: #5F2D83; /* Purple background */
+  padding: 15px 0; /* Space above and below the nav */
+}
+
+/* Remove bullet points and reset spacing */
+nav ul {
+  list-style-type: none; /* No bullet points */
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Center the navigation items */
+}
+
+/* Display navigation items horizontally */
+nav li {
+  display: inline-block; /* Items in a row */
+  margin: 0 20px; /* Space between items */
+}
+
+/* Style the navigation links */
+nav a {
+  color: white; /* White text */
+  text-decoration: none; /* Remove underline */
+  font-size: 18px;
+  padding: 10px 15px; /* Clickable area around text */
+}
+
+/* Change color when hovering over links */
+nav a:hover {
+  background-color: #A4186C; /* Pink background on hover */
+  border-radius: 5px; /* Rounded corners */
+}
+
 
 
 
