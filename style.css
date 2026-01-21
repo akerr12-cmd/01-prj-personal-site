@@ -173,11 +173,20 @@ main section {
 
 /* End */
 
+/* ---------- Section divider ---------- */
+.section-divider {
+  border: none;
+  height: 3px;
+  background: #062;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
 /* ---------- Hero styles (background overlay, portrait, panels) ---------- */
 .hero {
   position: relative;
   overflow: visible;
-  padding: 36px 0 60px;
+  padding: 20px 20px;
 }
 
 .hero-bg {
