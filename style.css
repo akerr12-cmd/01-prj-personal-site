@@ -176,9 +176,9 @@ main section {
 /* ---------- Section divider ---------- */
 .section-divider {
   border: none;
-  height: 3px;
-  background: #062;
-  margin: 0 auto;
+  height: 10px;
+  background: var(--color-mauve);
+  margin: 20px auto;
   max-width: 1000px;
 }
 
@@ -207,7 +207,7 @@ main section {
 .title-bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background: #6bd24a;
   /* bright green */
   padding: 18px 22px;
