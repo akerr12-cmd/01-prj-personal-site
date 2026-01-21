@@ -47,48 +47,6 @@ body::before {
   z-index: -1;
 }
 
-/* ---------- Header (logo + title + profile) ---------- */
-.top-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 0;
-  position: relative;
-}
-
-.logo-and-title {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.logo-img {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-}
-
-.site-title h1 {
-  margin: 0;
-  font-family: var(--font-heading);
-  color: var(--color-purple);
-  font-size: 48px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-}
-
-.profile-img {
-  width: 110px;
-  height: 110px;
-  object-fit: cover;
-  border-radius: 6px;
-  border: 3px solid white;
-}
-
 /* ---------- Navigation: boxed links under header ---------- */
 .main-nav {
   margin: 8px 0 20px 0;
@@ -110,12 +68,13 @@ body::before {
 
 .main-nav a {
   display: block;
-  padding: 16px 20px;
+  padding: 8px 10px;
   text-align: center;
   text-decoration: none;
-  color: #222;
-  font-size: 20px;
-  border: 1px solid #cfcfcf;
+  color: var(--color-purple);
+  font-size: 40px;
+  font-family: var(--font-h2);
+  border: 2px solid #4dc7dd;
   border-left: 0;
 }
 
@@ -178,7 +137,7 @@ main section {
   border: none;
   height: 10px;
   background: var(--color-mauve);
-  margin: 20px auto;
+  margin: 0px auto 30px auto;
   max-width: 1000px;
 }
 
@@ -189,15 +148,6 @@ main section {
   padding: 20px 20px;
 }
 
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  background-image: url('img/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.95;
-}
 
 .hero-inner {
   position: relative;
@@ -222,19 +172,10 @@ main section {
   font-family: var(--font-heading);
 }
 
-.title-bar .icons {
-  font-size: 28px;
-  opacity: 0.9;
-}
-
 .hero-content {
   display: flex;
   gap: 20px;
   align-items: flex-start;
-}
-
-.portrait-wrap {
-  flex: 0 0 220px;
 }
 
 .portrait-frame {
