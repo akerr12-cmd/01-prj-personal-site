@@ -7,17 +7,32 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navigation bar at the top of the page -->
-  <nav>
+  <!-- Top header: logo, site title, profile image -->
+  <header class="top-header container">
+    <div class="logo-and-title">
+      <img src="img/profile.jpg" alt="Amanda Kerr" class="logo-img">
+      <div class="site-title">
+        <h1>Amanda Kerr</h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation bar placed below the header (boxed links like the reference) -->
+  <nav class="main-nav container">
     <ul>
       <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Portfolio</a></li>
+      <li><a href="#resume">Resume</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-  
-  <!-- Add your HTML content here -->
+
+  <main class="container">
+    <!-- About section -->
+    <section id="about">
+      <h2>About</h2>
+      <p>Short bio goes here. Describe your interests, what you're learning, and the types of projects you want to build.</p>
+    </section>
+  </main>
 </body>
 </html>

@@ -13,40 +13,44 @@
 }
 
 
-/* Navigation bar styles */
-nav {
-  background-color: #5F2D83; /* Purple background */
-  padding: 15px 0; /* Space above and below the nav */
+/* ---------- Simple layout helpers ---------- */
+.container { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
+* { box-sizing: border-box; }
+
+/* ---------- Header (logo + title + profile) ---------- */
+.top-header { display:flex; align-items:center; justify-content:space-between; padding:18px 0; position:relative; }
+.logo-and-title { display:flex; align-items:center; gap:18px; }
+.logo-img { width:64px; height:64px; border-radius:50%; object-fit:cover; display:block; }
+.site-title h1 { margin:0; font-family: var(--font-heading); color: var(--color-purple); font-size:48px; position:absolute; left:50%; transform:translateX(-50%); white-space:nowrap; }
+.profile-img { width:110px; height:110px; object-fit:cover; border-radius:6px; border:3px solid white; }
+
+/* ---------- Navigation: boxed links under header ---------- */
+.main-nav { margin: 8px 0 20px 0; }
+.main-nav ul { list-style:none; margin:0; padding:0; display:flex; }
+.main-nav li { flex:1; }
+.main-nav a { display:block; padding:12px 10px; text-align:center; text-decoration:none; color:#222; border:1px solid #cfcfcf; border-left:0; }
+.main-nav li:first-child a { border-left:1px solid #cfcfcf; }
+.main-nav a:hover { background: var(--color-light-pink); color:white; }
+
+/* ---------- About section ---------- */
+main section { background: white; padding:18px; border-radius:6px; box-shadow:0 6px 18px rgba(0,0,0,0.04); }
+
+/* ---------- Responsive: stack header on small screens ---------- */
+@media (max-width:720px) {
+  .top-header { flex-direction:column; gap:12px; text-align:center; }
+  .profile-img { width:120px; height:120px; }
+  .main-nav ul { flex-direction:column; }
+  .main-nav li { width:100%; }
+  .main-nav a { text-align:left; padding-left:18px; }
+  /* On small screens keep the H1 in normal flow and centered */
+  .site-title h1 { position:static; transform:none; font-size:36px; white-space:normal; }
 }
 
-/* Remove bullet points and reset spacing */
-nav ul {
-  list-style-type: none; /* No bullet points */
-  margin: 0;
-  padding: 0;
-  text-align: center; /* Center the navigation items */
-}
+/* End */
 
-/* Display navigation items horizontally */
-nav li {
-  display: inline-block; /* Items in a row */
-  margin: 0 20px; /* Space between items */
-}
 
-/* Style the navigation links */
-nav a {
-  color: white; /* White text */
-  text-decoration: none; /* Remove underline */
-  font-size: 40px;
-  padding: 10px 15px; /* Clickable area around text */
-  font-family: var(--font-heading); /* Use heading font */
-}
 
-/* Change color when hovering over links */
-nav a:hover {
-  background-color: #A4186C; /* Pink background on hover */
-  border-radius: 5px; /* Rounded corners */
-}
+
 
 
 
