@@ -9,7 +9,9 @@
 
   /* Font families */
   --font-heading: "giddyup-std", sans-serif;
+  --font-h2: "blanket", sans-serif;
   --font-body: "lora", serif;
+
 }
 
 
@@ -236,11 +238,18 @@ main section {
   background: #fff;
   color: #7f1438;
   padding: 8px 12px;
-  font-weight: 700;
-  font-family: sans-serif;
+  font-family: 
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  font-family: var(--font-h2);
   border: 4px solid #d9f6c8;
-  display: inline-block;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
 }
+
+.magenta-panel .icons { margin-top: 10px; text-align: center; font-size: 26px; }
 
 .bio-frame {
   background: #f4d24b;
@@ -253,6 +262,7 @@ main section {
   margin: 0;
   color: #1c1c1c;
   line-height: 1.45;
+  font-family: var(--font-body);
 }
 
 @media (max-width:900px) {
