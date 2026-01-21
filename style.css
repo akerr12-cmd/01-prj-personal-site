@@ -6,22 +6,27 @@
   --color-pink: #A4186C;
   --color-mauve: #8D3A6C;
   --color-light-pink: #C2388C;
+  --color-title-bar: #d87797;
+  --color-title-text: rgb(3, 46, 17);
+  --color-nav-border: #4dc7dd;
+  --color-portrait-bg: #f474b6;
+  --color-portrait-border: #14c7bd;
+  --color-magenta-text: #7f1438;
+  --color-quote-bg: #fff;
+  --color-quote-border: #d9f6c8;
+  --color-quote-border-green: #2fbf24;
+  --color-bio-bg: #f4d24b;
+  --color-bio-border: #b98a1a;
+  --color-text-dark: #1c1c1c;
+  --color-white: white;
 
   /* Font families */
   --font-heading: "giddyup-std", sans-serif;
   --font-h2: "blanket", sans-serif;
   --font-body: "lora", serif;
-
 }
 
-
-/* ---------- Simple layout helpers ---------- */
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
+/* ---------- Global / Reset ---------- */
 * {
   box-sizing: border-box;
 }
@@ -32,6 +37,7 @@ body {
   position: relative;
 }
 
+/* Background overlay on body */
 body::before {
   content: '';
   position: fixed;
@@ -47,7 +53,44 @@ body::before {
   z-index: -1;
 }
 
-/* ---------- Navigation: boxed links under header ---------- */
+/* ---------- Utilities ---------- */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  position: relative;
+  overflow: visible;
+  padding: 20px 20px;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+}
+
+/* Title Bar (header inside hero) */
+.title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-title-bar);
+  padding: 18px 22px;
+  color: var(--color-dark-red);
+  border-radius: 8px;
+  margin-bottom: 22px;
+}
+
+.title-bar h1 {
+  margin: 0;
+  font-size: 6rem;
+  font-family: var(--font-heading);
+}
+
+/* Navigation */
 .main-nav {
   margin: 8px 0 20px 0;
   max-width: 100%;
@@ -74,12 +117,7 @@ body::before {
   color: var(--color-purple);
   font-size: 40px;
   font-family: var(--font-h2);
-  border: 2px solid #4dc7dd;
-  border-left: 0;
-}
-
-.main-nav li:first-child a {
-  border-left: 1px solid #cfcfcf;
+  border: 2px solid var(--color-nav-border);
 }
 
 .main-nav a:hover {
@@ -87,52 +125,7 @@ body::before {
   color: white;
 }
 
-/* ---------- About section ---------- */
-main section {
-  background: white;
-  padding: 18px;
-  border-radius: 6px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
-}
-
-/* ---------- Responsive: stack header on small screens ---------- */
-@media (max-width:720px) {
-  .top-header {
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
-  }
-
-  .profile-img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .main-nav ul {
-    flex-direction: column;
-  }
-
-  .main-nav li {
-    width: 100%;
-  }
-
-  .main-nav a {
-    text-align: left;
-    padding-left: 18px;
-  }
-
-  /* On small screens keep the H1 in normal flow and centered */
-  .site-title h1 {
-    position: static;
-    transform: none;
-    font-size: 36px;
-    white-space: normal;
-  }
-}
-
-/* End */
-
-/* ---------- Section divider ---------- */
+/* ---------- Section Divider ---------- */
 .section-divider {
   border: none;
   height: 10px;
@@ -141,35 +134,9 @@ main section {
   max-width: 1000px;
 }
 
-/* ---------- Hero styles (background overlay, portrait, panels) ---------- */
-.hero {
-  position: relative;
-  overflow: visible;
-  padding: 20px 20px;
-}
-
-
-.hero-inner {
-  position: relative;
-  z-index: 2;
-}
-
-.title-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #6bd24a;
-  /* bright green */
-  padding: 18px 22px;
-  color: #062;
-  border-radius: 2px;
-  margin-bottom: 22px;
-}
-
-.title-bar h1 {
-  margin: 0;
-  font-size: 72px;
-  font-family: var(--font-heading);
+/* ---------- Hero Body Section ---------- */
+.hero-body {
+  /* container utilities apply */
 }
 
 .hero-content {
@@ -178,10 +145,11 @@ main section {
   align-items: flex-start;
 }
 
+/* Portrait/Figure */
 .portrait-frame {
-  background: #f474b6;
+  background: var(--color-portrait-bg);
   padding: 12px;
-  border: 6px solid #14c7bd;
+  border: 6px solid var(--color-portrait-border);
   display: inline-block;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
@@ -193,6 +161,7 @@ main section {
   object-fit: cover;
 }
 
+/* Hero Panels (quote + bio) */
 .hero-panels {
   flex: 1 1 0;
   display: flex;
@@ -200,47 +169,61 @@ main section {
   gap: 18px;
 }
 
+/* Quote Panel */
 .magenta-panel {
-  background: #7f1438;
+  background: var(--color-title-bar);
   min-height: 120px;
-  border: 6px solid #2fbf24;
+  border: 6px solid var(--color-quote-border-green);
   display: flex;
   align-items: center;
   padding: 12px;
 }
 
 .magenta-panel .quote {
-  background: #fff;
-  color: #7f1438;
+  background: var(--color-quote-bg);
+  color: var(--color-magenta-text);
   padding: 8px 12px;
-  font-family: 
   font-weight: 400;
   font-style: normal;
   font-size: 32px;
   font-family: var(--font-h2);
-  border: 4px solid #d9f6c8;
+  border: 4px solid var(--color-quote-border);
   display: block;
   text-align: center;
   margin: 0 auto;
 }
 
-.magenta-panel .icons { margin-top: 10px; text-align: center; font-size: 26px; }
+.magenta-panel .icons {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 26px;
+}
 
+/* Bio Panel */
 .bio-frame {
-  background: #f4d24b;
+  background: var(--color-bio-bg);
   padding: 18px;
-  border: 6px solid #b98a1a;
+  border: 6px solid var(--color-bio-border);
   box-shadow: inset 0 -8px 0 rgba(0, 0, 0, 0.03);
 }
 
 .bio-frame p {
   margin: 0;
-  color: #1c1c1c;
+  color: var(--color-text-dark);
   line-height: 1.45;
   font-family: var(--font-body);
 }
 
-@media (max-width:900px) {
+/* ---------- Main Content Section ---------- */
+main section {
+  background: var(--color-white);
+  padding: 18px;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+/* ---------- Responsive Media Queries ---------- */
+@media (max-width: 900px) {
   .title-bar h1 {
     font-size: 36px;
   }
@@ -250,10 +233,6 @@ main section {
     align-items: center;
   }
 
-  .portrait-wrap {
-    order: 1;
-  }
-
   .hero-panels {
     order: 2;
     width: 100%;
@@ -261,5 +240,20 @@ main section {
 
   .portrait-frame {
     transform: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .main-nav ul {
+    flex-direction: column;
+  }
+
+  .main-nav li {
+    width: 100%;
+  }
+
+  .main-nav a {
+    text-align: left;
+    padding-left: 18px;
   }
 }
