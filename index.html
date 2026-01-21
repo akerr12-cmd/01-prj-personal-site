@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>My Personal Site</title>
   <link rel="stylesheet" href="https://use.typekit.net/gij5kzk.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <!-- Top header: logo, site title, profile image -->
   <header class="top-header container">
@@ -17,8 +19,13 @@
     </div>
   </header>
 
-  <!-- Navigation bar placed below the header (boxed links like the reference) -->
-  <nav class="main-nav container">
+  <!-- Hero with background overlay, title banner, portrait, quote and framed bio -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-inner">
+      <div class="title-bar">
+        <h1>Amanda Kerr</h1>
+        <nav class="main-nav container">
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#projects">Portfolio</a></li>
@@ -26,13 +33,36 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
+        <div class="icons">🎨 🎮 📚 🎵</div>
+      </div>
+
+      <div class="hero-content">
+        <div class="portrait-wrap">
+          <div class="portrait-frame">
+            <img src="img/profile.jpg" alt="Amanda Kerr portrait" class="portrait">
+          </div>
+        </div>
+
+        <div class="hero-panels">
+          <div class="magenta-panel">
+            <div class="quote">“FUELED BY PIXELS, PLAYLISTS, AND PLOT TWISTS.”</div>
+          </div>
+
+          <div class="bio-frame">
+            <p>I’m a creative soul inspired by books, games, art, and music, each fueling the way I see design.
+              Curiosity and a love for learning drive me to approach every project as both an artistic expression and a
+              problem‑solving challenge. As I work toward becoming a marketing graphic designer, my goal is to merge
+              creativity with strategy to craft visuals that connect and inspire.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <main class="container">
-    <!-- About section -->
-    <section id="about">
-      <h2>About</h2>
-      <p>Short bio goes here. Describe your interests, what you're learning, and the types of projects you want to build.</p>
-    </section>
+    <!-- Additional content sections can go here -->
   </main>
 </body>
+
 </html>
