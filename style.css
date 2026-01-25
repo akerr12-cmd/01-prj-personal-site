@@ -222,6 +222,13 @@ body::before {
   font-family: var(--font-body);
 }
 
+/* ---------- Two Column Layout ---------- */
+.two-column-layout {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
 /* ---------- Skills Section ---------- */
 .skills {
   background: var(--color-quote-border);
@@ -229,8 +236,8 @@ body::before {
   border-radius: 8px;
   border: 6px solid var(--color-purple);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  max-width: 450px;
-  margin-left: 0;
+  flex: 1;
+  min-height: 200px;
 }
 
 #skills h2 {
@@ -250,8 +257,43 @@ body::before {
 }
 
 .skills-icons img {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+/* ---------- Find Me Section ---------- */
+.find-me {
+  background: var(--color-quote-border);
+  padding: 10px;
+  border-radius: 8px;
+  border: 6px solid var(--color-purple);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  flex: 1;
+  min-height: 200px;
+}
+
+#contact h2 {
+  font-family: var(--font-h2);
+  font-size: 2rem;
+  color: var(--color-text-dark);
+  text-align: center;
+  margin: 8px;
+  text-decoration: underline dotted var(--color-bio-border);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.social-icons img {
+  width: 60px;
+  height: 60px;
   object-fit: contain;
 }
 
