@@ -45,11 +45,12 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('img/bg\ overlay.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.3;
+  /* Light cream base color */
+  background-color: #faf8f3;
+  /* Subtle texture effect using repeating gradient */
+  background-image: 
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(230, 220, 200, 0.3) 2px, rgba(230, 220, 200, 0.3) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(230, 220, 200, 0.3) 2px, rgba(230, 220, 200, 0.3) 4px);
   z-index: -1;
 }
 
