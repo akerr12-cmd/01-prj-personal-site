@@ -40,11 +40,7 @@ body {
   background-repeat: no-repeat;
   background-position: -150px top;
   background-attachment: scroll;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-x: hidden;
+ 
 }
 
 /* ---------- Utilities ---------- */
@@ -71,7 +67,7 @@ body {
 /* Navigation */
 .main-nav {
   position: absolute;
-  top: 275px;
+  top: 325px;
   left: 50%;
   transform: translateX(-50%);
   max-width: 900px;
@@ -97,7 +93,7 @@ body {
 .main-nav li::before {
   content: '';
   position: absolute;
-  top: -90px;
+  top: -110px;
   left: 50%;
   transform: translateX(-50%);
   width: 10px;
@@ -136,17 +132,17 @@ body {
   justify-content: center;
   padding: 40px 20px 0px 20px;
   color: var(--color-dark-red);
-  margin: 70px 0 0 0;
+  margin: 0px;
   background-image: url('img/chain_board1.png');
-  background-size: 30%;
-  background-position: center;
+  background-position: center 70%;
+  background-size: 600px 250px;
   background-repeat: no-repeat;
-  min-height: 500px;
+  min-height: 400px;
   min-width: 800px;
 }
 
 .title-bar h1 {
-  margin: 0;
+  margin: 100px 0 0 0;
   font-size: 7rem;
   font-family: var(--font-heading);
   text-shadow: 3px 3px 6px rgba(105, 6, 72, 0.7);
