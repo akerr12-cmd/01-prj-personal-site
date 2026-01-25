@@ -27,6 +27,7 @@
 }
 
 /* ---------- Global / Reset ---------- */
+
 * {
   box-sizing: border-box;
 }
@@ -35,27 +36,21 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-  background: linear-gradient(to bottom, #87CEEB 0%, #B0E0E6 50%, #F0F8FF 100%);
-  min-height: 100vh;
-}
-
-/* Background overlay on body */
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-image: url(img/cheshire_cat_new.png);
   background-repeat: no-repeat;
-  background-position: -140px top;
-  z-index: -1;
+  background-position: -150px top;
+  background-attachment: scroll;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
 }
 
 /* ---------- Utilities ---------- */
 .container {
-  max-width: 1000px;
+  max-width: 1400px;
+  width: 75%;
   margin: 0 auto;
   padding: 0 16px;
 }
@@ -73,34 +68,10 @@ body::before {
   z-index: 2;
 }
 
-/* Title Bar (separate section) */
-.title-bar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px 0px 20px;
-  color: var(--color-dark-red);
-  border-radius: 8px;
-  margin: 70px 0 0 0;
-  gap: 150px;
-  background-image: url('img/chain_board1.png');
-  background-size: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.title-bar h1 {
-  margin: 0;
-  font-size: 7rem;
-  font-family: var(--font-heading);
-  text-shadow: 3px 3px 6px rgba(105, 6, 72, 0.7);
-}
-
-
 /* Navigation */
 .main-nav {
   position: absolute;
-  top: 300px;
+  top: 275px;
   left: 50%;
   transform: translateX(-50%);
   max-width: 900px;
@@ -126,11 +97,11 @@ body::before {
 .main-nav li::before {
   content: '';
   position: absolute;
-  top: -80px;
+  top: -90px;
   left: 50%;
   transform: translateX(-50%);
-  width: 6px;
-  height: 120px;
+  width: 10px;
+  height: 130px;
   background: #4A3728;
   z-index: -1;
 }
@@ -158,11 +129,30 @@ body::before {
   color: white;
 }
 
-/* ---------- Intro Body Section ---------- */
-.intro-body {
-  /* container utilities apply */
+/* ---------- Title Bar Section ---------- */
+.title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px 0px 20px;
+  color: var(--color-dark-red);
+  margin: 70px 0 0 0;
+  background-image: url('img/chain_board1.png');
+  background-size: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  min-width: 800px;
 }
 
+.title-bar h1 {
+  margin: 0;
+  font-size: 7rem;
+  font-family: var(--font-heading);
+  text-shadow: 3px 3px 6px rgba(105, 6, 72, 0.7);
+}
+
+/* ---------- Intro Body Section ---------- */
 .intro-content {
   display: flex;
   gap: 20px;
