@@ -38,8 +38,8 @@ body {
   position: relative;
   background-image: url(img/cheshire_cat_new.png);
   background-repeat: no-repeat;
-  background-position: -150px top;
   background-attachment: scroll;
+  background-size: cover;
  
 }
 
@@ -67,11 +67,10 @@ body {
 /* Navigation */
 .main-nav {
   position: absolute;
-  top: 325px;
-  left: 50%;
+  top: 350px;
+  left: 900px;
   transform: translateX(-50%);
   max-width: 900px;
-  width: calc(100% - 32px);
 }
 
 .main-nav ul {
@@ -129,20 +128,21 @@ body {
 .title-bar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   padding: 40px 20px 0px 20px;
   color: var(--color-dark-red);
-  margin: 0px;
+  margin: 0px 0px 0px 180px;
   background-image: url('img/chain_board1.png');
-  background-position: center 70%;
-  background-size: 600px 250px;
+  background-position: center 80%;
+  background-size: 650px 250px;
   background-repeat: no-repeat;
   min-height: 400px;
   min-width: 800px;
+  gap: 60px;
 }
 
 .title-bar h1 {
-  margin: 100px 0 0 0;
+  margin: 150px 0 0 0;
   font-size: 7rem;
   font-family: var(--font-heading);
   text-shadow: 3px 3px 6px rgba(105, 6, 72, 0.7);
@@ -155,9 +155,14 @@ body {
   align-items: flex-start;
 }
 
+/* Hide portrait in intro-content, it's now in title-bar */
+.intro-content .portrait-frame {
+  display: none;
+}
+
 /* Portrait/Figure */
 .portrait-frame {
-  background: var(--color-portrait-bg);
+  background: rgb(56, 26, 7);
   padding: 12px;
   border: 6px solid var(--color-portrait-border);
   display: inline-block;
