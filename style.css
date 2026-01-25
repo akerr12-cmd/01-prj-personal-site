@@ -242,11 +242,11 @@ body::before {
 
 #skills h2 {
   font-family: var(--font-h2);
-  font-size: 2rem;
-  color: var(--color-pink);
+  font-size: 2.2rem;
+  color: var(--color-purple);
   text-align: center;
   margin: 8px;
-  text-decoration: underline dotted var(--color-pink);
+  text-decoration: underline dotted var(--color-purple);
 }
 
 .skills-icons {
@@ -262,6 +262,21 @@ body::before {
   object-fit: contain;
 }
 
+.skills-link {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: var(--color-purple);
+  font-family: var(--font-h2);
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+.skills-link:hover {
+  color: var(--color-light-pink);
+  text-decoration: underline;
+}
+
 /* ---------- Find Me Section ---------- */
 .find-me {
   background: var(--color-quote-border);
@@ -275,11 +290,11 @@ body::before {
 
 #contact h2 {
   font-family: var(--font-h2);
-  font-size: 2rem;
-  color: var(--color-text-dark);
+  font-size: 2.2rem;
+  color: var(--color-purple);
   text-align: center;
   margin: 8px;
-  text-decoration: underline dotted var(--color-bio-border);
+  text-decoration: underline dotted var(--color-purple);
 }
 
 .social-icons {
