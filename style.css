@@ -133,18 +133,18 @@ body {
   display: flex;
   flex-direction: row; /* Changed to row to place portrait next to h1 */
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Align content to the left */
   padding: 80px 20px 0;
   color: var(--color-dark-red);
-  background: url('img/chain_board1.png') center 80% / 900px 300px no-repeat;
+  background: url('img/chain_board1.png') center 90% / 900px 300px no-repeat; /* Moved background down */
   min-height: 400px;
   min-width: 800px;
   margin-left: 70px;
-  gap: 30px; /* Space between title content and portrait */
+
 }
 
 .title-bar h1 {
-  margin: 140px 0 0 0;
+  margin: 80px 0 5px 0; /* Reduced top margin to move h1 and blockquote up */
   font-size: 7rem;
   font-family: var(--font-heading);
   text-shadow: 3px 3px 6px rgba(105, 6, 72, 0.7);
@@ -152,8 +152,8 @@ body {
 }
 
 /* Style for paragraph in title bar */
-.title-bar blockquote {
-  margin: o;
+.title-bar p {
+  margin: 0; /* Removed margins to keep elements close */
   font-size: 1.5rem; /* Increased font size */
   font-family: var(--font-body);
 }
