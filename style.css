@@ -60,19 +60,19 @@ body::before {
   padding: 0 16px;
 }
 
-/* ---------- Hero Section ---------- */
-.hero {
+/* ---------- Banner Section ---------- */
+.banner {
   position: relative;
   overflow: visible;
   padding: 20px 20px;
 }
 
-.hero-inner {
+.banner-inner {
   position: relative;
   z-index: 2;
 }
 
-/* Title Bar (header inside hero) */
+/* Title Bar (header inside banner) */
 .title-bar {
   display: flex;
   align-items: center;
@@ -134,12 +134,12 @@ body::before {
   max-width: 1000px;
 }
 
-/* ---------- Hero Body Section ---------- */
-.hero-body {
+/* ---------- Intro Body Section ---------- */
+.intro-body {
   /* container utilities apply */
 }
 
-.hero-content {
+.intro-content {
   display: flex;
   gap: 20px;
   align-items: flex-start;
@@ -161,8 +161,8 @@ body::before {
   object-fit: cover;
 }
 
-/* Hero Panels (quote + bio) */
-.hero-panels {
+/* Intro Panels (quote + bio) */
+.intro-panels {
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
@@ -228,12 +228,12 @@ main section {
     font-size: 36px;
   }
 
-  .hero-content {
+  .intro-content {
     flex-direction: column;
     align-items: center;
   }
 
-  .hero-panels {
+  .intro-panels {
     order: 2;
     width: 100%;
   }
