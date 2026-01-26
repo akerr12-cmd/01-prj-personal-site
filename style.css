@@ -49,8 +49,8 @@ body {
   padding: 0 20px;
 }
 
-/* ---------- Banner Section ---------- */
-.banner {
+/* ---------- Header Section ---------- */
+header {
   position: relative;
   overflow: visible;
   padding: 10px;
@@ -63,11 +63,6 @@ body {
   overflow: visible;
   padding: 20px;
   min-height: 100px;
-}
-
-.banner-inner {
-  position: relative;
-  z-index: 2;
 }
 
 /* Navigation */
