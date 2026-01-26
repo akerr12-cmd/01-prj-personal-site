@@ -1,15 +1,3 @@
-.title-text {
-  margin-top: -20px; /* Moves h1 and p up without moving the Cheshire Cat image */
-  text-align: center; /* Keeps text centered */
-}
-/* Cheshire Cat image centered above the title bar */
-.cheshire-img {
-  width: 180px; /* Increased size for better visibility */
-  height: auto;
-  display: block;
-  margin: 0 auto; /* 10px space below the cat image */
-  pointer-events: none;
-}
 :root {
   /* Color palette */
   --color-purple: #5F2D83;
@@ -55,12 +43,105 @@ body {
   padding: 0 20px;
 }
 
+  position: relative;
+  overflow: visible;
+  padding: clamp(5px, 1vw, 10px);
+  min-height: clamp(60px, 10vh, 100px);
+  margin: 0 auto;
+  padding: clamp(10px, 2vw, 20px) 0;
+  max-width: clamp(600px, 80vw, 900px);
+  margin-top: 40px;
+  
 /* ---------- Header Section ---------- */
 header {
   position: relative;
   overflow: visible;
   padding: clamp(5px, 1vw, 10px);
   min-height: clamp(60px, 10vh, 100px);
+}
+
+/* ---------- Title Bar Section ---------- */
+.title-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(120px, 20vh, 200px);
+  padding: clamp(5px, 1vw, 10px) clamp(10px, 2vw, 20px);
+  color: var(--color-dark-red);
+}
+
+.title-bar-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(15px, 3vw, 30px);
+}
+
+.title-bar-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(800px, 120%, 1800px);
+  height: clamp(430px, 90%, 630px); /* Increased height for a more stretched background */
+  background-image: url('img/chain_board1.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.title-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  margin-top: clamp(40px, 10vw, 90px);
+}
+
+.cheshire-img {
+  width: 180px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  pointer-events: none;
+}
+
+.title-text {
+  margin-top: -20px;
+  text-align: center;
+}
+
+.title-bar h1 {
+  margin: 0;
+  font-size: 8rem;
+  font-family: var(--font-heading);
+  text-shadow: clamp(2px, 0.3vw, 3px) clamp(2px, 0.3vw, 3px) clamp(4px, 0.6vw, 6px) rgba(105, 6, 72, 0.7);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title-bar p {
+  margin: clamp(-40px, -2vw, -15px) 0 0 0;
+  font-size: clamp(1.2rem, 2vw, 1.9rem);
+  font-family: var(--font-body);
+  font-weight: bolder;
+  text-align: center;
+}
+
+.portrait {
+  display: block;
+  width: clamp(100px, 15vw, 140px);
+  height: auto;
+  object-fit: contain;
+  transform: rotate(-5deg);
+  position: relative;
+  z-index: 10;
+  align-self: flex-end;
+  margin-top: clamp(40px, 8vw, 80px);
 }
 
 /* Navigation */
@@ -86,7 +167,7 @@ header {
   position: relative;
 }
 
-/* Create hanging effect with top border */
+/* Create hanging effect for navigation items */
 .main-nav li::before {
   content: '';
   position: absolute;
@@ -105,7 +186,8 @@ header {
   text-align: center;
   text-decoration: none;
   color: var(--color-purple);
-  font-size: clamp(2rem, 4vw, 3.5rem); /* Responsive font size */
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  /* Responsive font size */
   font-family: var(--font-h2);
   border: clamp(2px, 0.4vw, 4px) solid rgb(67, 38, 9);
   border-radius: clamp(4px, 0.8vw, 8px) clamp(4px, 0.8vw, 8px) 0 0;
@@ -136,13 +218,32 @@ header {
   gap: clamp(15px, 3vw, 30px);
 }
 
+.title-text {
+  margin-top: -20px;
+  /* Moves h1 and p up without moving the Cheshire Cat image */
+  text-align: center;
+  /* Keeps text centered */
+}
+
+/* Cheshire Cat image centered above the title bar */
+.cheshire-img {
+  width: 180px;
+  /* Increased size for better visibility */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  /* 10px space below the cat image */
+  pointer-events: none;
+}
+
 .title-bar-bg {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: clamp(800px, 120%, 1800px);
-  height: clamp(320px, 80%, 520px); /* Decreased height */
+  height: clamp(430px, 90%, 630px); /* Increased height for a more stretched background */
+  /* Decreased height */
   background-image: url('img/chain_board1.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -171,7 +272,8 @@ header {
 
 .title-bar p {
   margin: clamp(-40px, -2vw, -15px) 0 0 0;
-  font-size: clamp(1.2rem, 2vw, 1.9rem); /* Responsive font */
+  font-size: clamp(1.2rem, 2vw, 1.9rem);
+  /* Responsive font */
   font-family: var(--font-body);
   font-weight: bolder;
   text-align: center;
@@ -179,13 +281,15 @@ header {
 
 .portrait {
   display: block;
-  width: clamp(100px, 15vw, 140px); /* Responsive width */
+  width: clamp(100px, 15vw, 140px);
+  /* Responsive width */
   height: auto;
   object-fit: contain;
   transform: rotate(-5deg);
   position: relative;
   z-index: 10;
-  align-self: flex-end; /* Moves portrait down within the wrapper */
+  align-self: flex-end;
+  /* Moves portrait down within the wrapper */
   margin-top: clamp(40px, 8vw, 80px);
 }
 
@@ -306,6 +410,7 @@ header {
 }
 
 @media (max-width: 900px) {
+
   /* Stack title bar vertically on smaller screens */
   .title-bar-wrapper {
     flex-direction: column;
@@ -317,7 +422,8 @@ header {
   }
 
   .portrait {
-    transform: none; /* Remove rotation on smaller screens */
+    transform: none;
+    /* Remove rotation on smaller screens */
     margin: clamp(10px, 2vw, 20px) auto;
     align-self: center;
   }
@@ -333,11 +439,13 @@ header {
   }
 
   .two-column-layout {
-    flex-direction: column; /* Stack skills and contact sections */
+    flex-direction: column;
+    /* Stack skills and contact sections */
   }
 }
 
 @media (max-width: 720px) {
+
   /* Stack navigation vertically */
   .main-nav ul {
     flex-direction: column;
@@ -345,7 +453,8 @@ header {
   }
 
   .main-nav li::before {
-    display: none; /* Remove hanging effect on mobile */
+    display: none;
+    /* Remove hanging effect on mobile */
   }
 }
 
