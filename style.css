@@ -57,6 +57,14 @@ body {
   min-height: 100px;
 }
 
+/* ---------- Links Section ---------- */
+.links {
+  position: relative;
+  overflow: visible;
+  padding: 20px;
+  min-height: 100px;
+}
+
 .banner-inner {
   position: relative;
   z-index: 2;
@@ -122,9 +130,13 @@ body {
   justify-content: center;
   gap: 30px;
   min-height: 200px;
-  padding: 30px 20px 20px;
+  padding: 30px 20px 20px 10%;
   color: var(--color-dark-red);
   position: relative;
+  background-image: url('img/chain_board1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: clamp(400px, 80%, 1000px);
 }
 
 /* Container for h1 and p text */
@@ -137,9 +149,10 @@ body {
   z-index: 1;
 }
 
+/* Style for main heading in title bar */
 .title-bar h1 {
   margin: 0;
-  font-size: clamp(3rem, 8vw, 7rem); /* Responsive heading */
+  font-size: clamp(2rem, 6vw, 5rem); /* Responsive heading */
   font-family: var(--font-heading);
   text-shadow: 3px 3px 6px rgba(105, 6, 72, 0.7);
   text-align: center;
