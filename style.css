@@ -35,6 +35,19 @@ body {
   position: relative;
 }
 
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Wrapper for all content except background image */
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+  margin-top: 40px;
+  margin-left: 0;
+}
+
 /* ---------- Utilities ---------- */
 .container {
   max-width: 1400px;
@@ -48,14 +61,6 @@ header {
   position: relative;
   overflow: visible;
   padding: clamp(5px, 1vw, 10px);
-  min-height: clamp(60px, 10vh, 100px);
-}
-
-/* ---------- Links Section ---------- */
-.links-container {
-  position: relative;
-  overflow: visible;
-  padding: clamp(10px, 2vw, 20px);
   min-height: clamp(60px, 10vh, 100px);
 }
 
@@ -124,7 +129,6 @@ header {
   margin-top: clamp(-30px, -2vw, -20px);
 }
 
-/* Wrapper that holds background and content together */
 .title-bar-wrapper {
   position: relative;
   display: flex;
@@ -133,7 +137,6 @@ header {
   gap: clamp(15px, 3vw, 30px);
 }
 
-/* Background image behind content */
 .title-bar-bg {
   position: absolute;
   top: 50%;
@@ -149,7 +152,6 @@ header {
   pointer-events: none;
 }
 
-/* Container for h1 and p text */
 .title-content {
   display: flex;
   flex-direction: column;
@@ -159,7 +161,6 @@ header {
   margin-top: clamp(25px, 5vw, 50px);
 }
 
-/* Style for main heading in title bar */
 .title-bar h1 {
   margin: 0;
   font-size: clamp(3rem, 8vw, 7rem); /* Responsive heading */
@@ -168,7 +169,6 @@ header {
   text-align: center;
 }
 
-/* Style for paragraph in title bar */
 .title-bar p {
   margin: clamp(-30px, -2vw, -20px) 0 0 0;
   font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font */
@@ -196,7 +196,6 @@ header {
   align-items: flex-start;
 }
 
-/* Intro Panels (quote + bio) */
 .intro-panels {
   flex: 1 1 0;
   display: flex;
@@ -204,7 +203,6 @@ header {
   gap: clamp(10px, 2vw, 18px);
 }
 
-/* Bio Panel */
 .bio-frame {
   background: var(--color-bio-bg);
   padding: clamp(10px, 2vw, 18px);
@@ -220,14 +218,20 @@ header {
   font-family: var(--font-body);
 }
 
-/* ---------- Two Column Layout ---------- */
+/* ---------- Links Section ---------- */
+.links-container {
+  position: relative;
+  overflow: visible;
+  padding: clamp(10px, 2vw, 20px);
+  min-height: clamp(60px, 10vh, 100px);
+}
+
 .two-column-layout {
   display: flex;
   gap: clamp(10px, 2vw, 20px);
   align-items: stretch;
 }
 
-/* ---------- Skills and Find Me Sections ---------- */
 .skills,
 .find-me {
   background: var(--color-quote-border);
@@ -350,30 +354,4 @@ header {
     width: 100%;
     padding: 0 clamp(5px, 1vw, 10px);
   }
-}
-
-/* Full-page background image behind all content */
-.background-img {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;    /* 100% of viewport width */
-  height: auto;    /* height adjusts automatically */
-  object-fit: fill; /* disables cropping/scaling */
-  z-index: 0;
-  pointer-events: none; /* So it doesn't block clicks */
-  background: #fff; /* Optional: fill background if image doesn't cover */
-  object-position: left center ;
-}
-
-body > *:not(.background-img) {
-  position: relative;
-  z-index: 1;
-}
-
-/* Wrapper for all content except background image */
-.content-wrapper {
-  position: relative;
-  z-index: 1;
-  /* You can add margin, padding, or transforms here to move all content */
 }
