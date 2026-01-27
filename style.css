@@ -1,3 +1,14 @@
+/* Overlay to make background image 80% transparent */
+.bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255,255,255,0.4); /* 60% transparent */
+  pointer-events: none; /* So it doesn't block clicks */
+  z-index: 0;
+}
 :root {
   /* Color palette */
   --color-purple: #5F2D83;
@@ -33,6 +44,8 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
+  background: url(img/aiw-bg.jpeg) center / cover no-repeat;
+ 
 }
 
 /* ---------- Utilities ---------- */
@@ -51,7 +64,7 @@ body {
   padding: clamp(10px, 2vw, 20px) 0;
   max-width: clamp(600px, 80vw, 900px);
   margin-top: 40px;
-  
+
 /* ---------- Header Section ---------- */
 header {
   position: relative;
@@ -68,6 +81,7 @@ header {
   min-height: clamp(120px, 20vh, 200px);
   padding: clamp(5px, 1vw, 10px) clamp(10px, 2vw, 20px);
   color: var(--color-dark-red);
+  margin-top: -40px; /* Moves the entire title bar up */
 }
 
 .title-bar-wrapper {
@@ -83,14 +97,14 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: clamp(800px, 120%, 1800px);
-  height: clamp(430px, 90%, 630px); /* Increased height for a more stretched background */
-  background-image: url('img/chain_board1.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 0;
-  pointer-events: none;
+    width: clamp(800px, 120%, 1800px);
+    height: clamp(430px, 90%, 630px); /* Increased height for a more stretched background */
+    background-image: url('img/chain_board1.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1; /* Background stays behind */
+    pointer-events: none;
 }
 
 .title-content {
@@ -98,16 +112,19 @@ header {
   flex-direction: column;
   align-items: center;
   position: relative;
-  z-index: 1;
-  margin-top: clamp(40px, 10vw, 90px);
+    z-index: 2; /* Content stays in front of background */
+    margin-bottom: clamp(40px, 10vw, 90px);
 }
 
 .cheshire-img {
   width: 180px;
   height: auto;
   display: block;
-  margin: 0 auto;
-  pointer-events: none;
+    margin: -90px auto 0 auto; /* Moves the Cheshire Cat image up */
+    position: relative;
+    z-index: 2; /* Image stays in front of background */
+    transform: scaleX(-1) translateX(120px) translateY(10px) rotate(12deg); /* Flips image, moves right, and rotates counterclockwise */
+    pointer-events: none;
 }
 
 .title-text {
@@ -121,7 +138,7 @@ header {
   font-family: var(--font-heading);
   text-shadow: clamp(2px, 0.3vw, 3px) clamp(2px, 0.3vw, 3px) clamp(4px, 0.6vw, 6px) rgba(105, 6, 72, 0.7);
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .title-bar p {
@@ -141,7 +158,7 @@ header {
   position: relative;
   z-index: 10;
   align-self: flex-end;
-  margin-top: clamp(40px, 8vw, 80px);
+  margin-bottom: 100px
 }
 
 /* Navigation */
@@ -149,7 +166,7 @@ header {
   margin: 0 auto;
   padding: clamp(10px, 2vw, 20px) 0;
   max-width: clamp(600px, 80vw, 900px);
-  margin-top: 40px;
+  margin-top: -20px;
 }
 
 .main-nav ul {
@@ -174,7 +191,7 @@ header {
   top: clamp(-80px, -12vw, -110px);
   left: 50%;
   transform: translateX(-50%);
-  width: clamp(6px, 1vw, 10px);
+  width: clamp(6px, 1vw, 15px);
   height: clamp(90px, 14vw, 130px);
   background: #4A3728;
   z-index: -1;
