@@ -457,6 +457,18 @@ header {
   object-fit: contain;
 }
 
+.skills-icons .material-icons {
+  font-size: clamp(48px, 8vw, 80px); /* Responsive size */
+  color: var(--color-purple);
+  margin: 0 10px;
+  vertical-align: middle;
+  transition: color 0.2s;
+}
+
+.skills-icons .material-icons:hover {
+  color: var(--color-light-pink);
+}
+
 .skills-link {
   display: block;
   text-align: center;
