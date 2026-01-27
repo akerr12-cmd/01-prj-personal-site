@@ -1,4 +1,3 @@
-
 /* ---------- Root Variables ---------- */
 :root {
   /* Color palette */
@@ -100,14 +99,15 @@ header {
   margin-bottom: clamp(40px, 10vw, 90px);
 }
 
+/* Make Cheshire Cat image responsive and allow it to shrink and move with the page */
 .cheshire-img {
-  width: 180px;
+  width: clamp(80px, 15vw, 180px); /* Responsive width */
   height: auto;
   display: block;
-  margin: -90px auto 0 auto; /* Moves the Cheshire Cat image up */
+  margin: clamp(-40px, -8vw, 0px) auto 0 auto; /* Responsive top margin */
   position: relative;
-  z-index: 2; /* Image stays in front of background */
-  transform: scaleX(-1) translateX(120px) translateY(10px) rotate(12deg); /* Flips image, moves right, and rotates counterclockwise */
+  z-index: 2;
+  transform: scaleX(-1) translateX(clamp(20px, 8vw, 120px)) translateY(clamp(0px, 2vw, 10px)) rotate(12deg);
   pointer-events: none;
 }
 
@@ -169,14 +169,14 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-    width: clamp(800px, 120%, 1800px);
-    height: clamp(430px, 90%, 630px); /* Increased height for a more stretched background */
-    background-image: url('img/chain_board1.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 1; /* Background stays behind */
-    pointer-events: none;
+  width: clamp(800px, 120%, 1800px);
+  height: clamp(430px, 90%, 630px); /* Increased height for a more stretched background */
+  background-image: url('img/chain_board1.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1; /* Background stays behind */
+  pointer-events: none;
 }
 
 .title-content {
@@ -184,19 +184,19 @@ header {
   flex-direction: column;
   align-items: center;
   position: relative;
-    z-index: 2; /* Content stays in front of background */
-    margin-bottom: clamp(40px, 10vw, 90px);
+  z-index: 2; /* Content stays in front of background */
+  margin-bottom: clamp(40px, 10vw, 90px);
 }
 
 .cheshire-img {
-  width: 180px;
+  width: clamp(80px, 15vw, 180px); /* Responsive width */
   height: auto;
   display: block;
-    margin: -90px auto 0 auto; /* Moves the Cheshire Cat image up */
-    position: relative;
-    z-index: 2; /* Image stays in front of background */
-    transform: scaleX(-1) translateX(120px) translateY(10px) rotate(12deg); /* Flips image, moves right, and rotates counterclockwise */
-    pointer-events: none;
+  margin: clamp(-40px, -8vw, 0px) auto 0 auto; /* Responsive top margin */
+  position: relative;
+  z-index: 2;
+  transform: scaleX(-1) translateX(clamp(20px, 8vw, 120px)) translateY(clamp(0px, 2vw, 10px)) rotate(12deg);
+  pointer-events: none;
 }
 
 .title-text {
@@ -230,7 +230,7 @@ header {
   position: relative;
   z-index: 10;
   align-self: flex-end;
-  margin-bottom: 100px
+  margin-bottom: 100px;
 }
 
 /* ---------- Navigation Section ---------- */
@@ -309,19 +309,19 @@ header {
 
 .title-text {
   margin-top: -20px;
-  /* Moves h1 and p up without moving the Cheshire Cat image */
   text-align: center;
-  /* Keeps text centered */
+
 }
 
 /* Cheshire Cat image centered above the title bar */
 .cheshire-img {
-  width: 180px;
-  /* Increased size for better visibility */
+  width: clamp(80px, 15vw, 180px); /* Responsive width */
   height: auto;
   display: block;
-  margin: 0 auto;
-  /* 10px space below the cat image */
+  margin: clamp(-40px, -8vw, 0px) auto 0 auto; /* Responsive top margin */
+  position: relative;
+  z-index: 2;
+  transform: scaleX(-1) translateX(clamp(20px, 8vw, 120px)) translateY(clamp(0px, 2vw, 25px)) rotate(12deg);
   pointer-events: none;
 }
 
@@ -331,8 +331,7 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   width: clamp(800px, 120%, 1800px);
-  height: clamp(430px, 90%, 630px); /* Increased height for a more stretched background */
-  /* Decreased height */
+  height: clamp(430px, 90%, 630px); 
   background-image: url('img/chain_board1.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -370,15 +369,14 @@ header {
 
 .portrait {
   display: block;
-  width: clamp(100px, 15vw, 140px);
-  /* Responsive width */
+  width: clamp(100px, 15vw, 140px);/* Responsive width */
   height: auto;
   object-fit: contain;
   transform: rotate(-5deg);
   position: relative;
   z-index: 10;
   align-self: flex-end;
-  /* Moves portrait down within the wrapper */
+ 
   margin-top: clamp(40px, 8vw, 80px);
 }
 
@@ -406,9 +404,11 @@ header {
 .bio-frame p {
   margin: 0;
   color: var(--color-text-dark);
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-size: 1.4rem;
   line-height: 1.45;
   font-family: var(--font-body);
+  text-align: center; 
+  padding: 10px;
 }
 
 
@@ -420,7 +420,7 @@ header {
   align-items: center;
     max-width: 900px;
     width: 90%;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .skills,
@@ -431,7 +431,8 @@ header {
   border: clamp(3px, 0.6vw, 6px) solid var(--color-purple);
   box-shadow: 0 clamp(3px, 0.6vw, 6px) clamp(6px, 1.2vw, 12px) rgba(0, 0, 0, 0.15);
   flex: 1;
-  min-height: clamp(60px, 10vh, 100px);
+    min-height: 200px;
+    height: 275px; /* Both containers will be exactly 180px tall */
 }
 
 #skills h2,
@@ -487,67 +488,62 @@ header {
   object-fit: contain;
 }
 
-/* ---------- Responsive Media Queries ---------- */
-
-/* Tablets and smaller - only structural layout changes, no size overrides */
-@media (max-width: 1024px) {
+/* ---------- Responsive Design for All Sections ---------- */
+@media (max-width: 1200px) {
   .container {
+    max-width: 1000px;
     width: 95%;
+    padding: 0 10px;
+  }
+  .title-bar h1 {
+    font-size: 5rem;
   }
 }
 
 @media (max-width: 900px) {
-
-  /* Stack title bar vertically on smaller screens */
-  .title-bar-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .title-content {
-    text-align: center;
-  }
-
-  .portrait {
-    transform: none;
-    /* Remove rotation on smaller screens */
-    margin: clamp(10px, 2vw, 20px) auto;
-    align-self: center;
-  }
-
-  .intro-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .intro-panels {
-    order: 2;
-    width: 100%;
-  }
-
-  .two-column-layout {
-    flex-direction: column;
-    /* Stack skills and contact sections */
-  }
-}
-
-@media (max-width: 720px) {
-
-  /* Stack navigation vertically */
-  .main-nav ul {
-    flex-direction: column;
-    gap: clamp(5px, 1vw, 10px);
-  }
-
-  .main-nav li::before {
-    display: none;
-    /* Remove hanging effect on mobile */
-  }
-}
-
-@media (max-width: 480px) {
   .container {
-    width: 100%;
-    padding: 0 clamp(5px, 1vw, 10px);
+    max-width: 700px;
+    width: 98%;
+    padding: 0 5px;
+  }
+  .title-bar h1 {
+    font-size: 3rem;
+  }
+  .portrait {
+    width: 90px;
+  }
+  .skills-icons img,
+  .social-icons img {
+    width: 50px;
+    height: 50px;
   }
 }
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 2px;
+  }
+  .title-bar h1 {
+    font-size: 2rem;
+  }
+  .title-bar p {
+    font-size: 1rem;
+  }
+  .portrait {
+    width: 60px;
+  }
+  .skills-icons img,
+  .social-icons img {
+    width: 32px;
+    height: 32px;
+  }
+  .skills,
+  .find-me {
+    min-height: 80px;
+    padding: 4px;
+    font-size: 0.9rem;
+  }
+}
+
