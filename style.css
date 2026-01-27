@@ -64,7 +64,7 @@ header {
   min-height: clamp(120px, 20vh, 200px);
   padding: clamp(5px, 1vw, 10px) clamp(10px, 2vw, 20px);
   color: var(--color-dark-red);
-  margin-top: -40px; /* Moves the entire title bar up */
+  margin-top: -40px; 
 }
 
 .title-bar-wrapper {
@@ -81,7 +81,7 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   width: clamp(800px, 120%, 1800px);
-  height: clamp(430px, 90%, 630px); /* Increased height for a more stretched background */
+  height: clamp(430px, 90%, 630px);
   background-image: url('img/chain_board1.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -99,7 +99,6 @@ header {
   margin-bottom: clamp(40px, 10vw, 90px);
 }
 
-/* Make Cheshire Cat image responsive and allow it to shrink and move with the page */
 .cheshire-img {
   width: clamp(80px, 15vw, 180px); /* Responsive width */
   height: auto;
@@ -153,7 +152,7 @@ header {
   min-height: clamp(120px, 20vh, 200px);
   padding: clamp(5px, 1vw, 10px) clamp(10px, 2vw, 20px);
   color: var(--color-dark-red);
-  margin-top: -40px; /* Moves the entire title bar up */
+  margin-top: -40px; /
 }
 
 .title-bar-wrapper {
