@@ -456,45 +456,47 @@ header {
   height: clamp(80px, 12vw, 120px);
   object-fit: contain;
 }
-<!DOCTYPE html>
-<html lang="en">
+.skills-icons .material-icons {
+  font-size: clamp(48px, 8vw, 80px); /* Responsive size */
+  color: var(--color-purple);
+  margin: 0 10px;
+  vertical-align: middle;
+  transition: color 0.2s;
+}
 
-<head>
-  <meta charset="UTF-8">
-  <title>My Personal Site</title>
-  <link rel="stylesheet" href="https://use.typekit.net/gij5kzk.css">
-  <link rel="stylesheet" href="style.css">
-  <title>Amanda Kerr</title>
-  <!-- Use Google Material Icons for skills -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
+.skills-icons .material-icons:hover {
+  color: var(--color-light-pink);
+}
 
-<body>
+.skills-link {
+  display: block;
+  text-align: center;
+  margin-top: clamp(8px, 1.5vw, 15px);
+  color: var(--color-purple);
+  font-family: var(--font-h2);
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+  text-decoration: none;
+}
 
-  <section class="title-bar">
-    <div class="title-bar-wrapper">
-      <div class="title-bar-bg"></div>
-      <div class="title-content">
-        <!-- Cheshire Cat image sits right above the h1 -->
-        <img src="img/chesh.png" alt="Cheshire Cat" class="cheshire-img">
-        <div class="title-text">
-          <h1>Amanda Kerr</h1>
-          <p class="quote">"FUELED BY PIXELS, PLAYLISTS, AND PLOT TWISTS."</p>
-        </div>
-      </div>
-      <img src="img/portrait.png" alt="Amanda Kerr portrait" class="portrait">
-    </div>
-  </section>
+.skills-link:hover {
+  color: var(--color-light-pink);
+  text-decoration: underline;
+}
 
-  <nav class="main-nav container" aria-label="Main Navigation">
-    <ul>
-      <!-- Navigation links updated to point to each page -->
-      <li><a href="index.html">Home</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: clamp(15px, 3vw, 30px);
+  flex-wrap: wrap;
+  max-width: clamp(250px, 40vw, 350px);
+  margin: 0 auto;
+}
+
+.social-icons img {
+  width: clamp(40px, 6vw, 60px);
+  height: clamp(40px, 6vw, 60px);
+  object-fit: contain;
+}
 .skills-icons .material-icons {
   font-size: clamp(48px, 8vw, 80px); /* Responsive size */
   color: var(--color-purple);
